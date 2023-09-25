@@ -32,7 +32,7 @@ export default function App() {
         <TextInput onChangeText={text=> setEmail(text)} placeholderTextColor={'#444'} style={[styles.campos, !emailVerdadero && emailVerdadero!=undefined ? {borderColor:'red'}:'']} placeholder="Email" keyboardType='email-address'></TextInput> 
         <TextInput onChangeText={text=> setContrasena(text)} placeholderTextColor={'#444'} style={[styles.campos, !contrasenaVerdadera  && contrasenaVerdadera!=undefined ? {borderColor:'red'}:'']} placeholder="Contraseña" secureTextEntry={true}></TextInput> 
         <View style={{backgroundColor:'#ba9b73'}}>
-        <Button onPress={login} color={'white'} title="Iniciar sesion"></Button>
+        <Button onPress={iniciarSesion} color={'white'} title="Iniciar sesion"></Button>
         </View>
         <Button title="¿Has olvidado tu contrseña?"></Button>
       </View>
