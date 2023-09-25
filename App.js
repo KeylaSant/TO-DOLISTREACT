@@ -14,7 +14,7 @@ export default function App() {
     const passwordRegex = /^(?=.*[A-Z]).{8,}$/;
 
     setEmailVerdadero(emailRegex.test(email));
-    setcontrasenaVerdadero(passwordRegex.test(contrasena));
+    setContrasenaVerdadera(passwordRegex.test(contrasena));
   }
 
   return (
