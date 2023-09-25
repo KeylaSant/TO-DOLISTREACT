@@ -16,7 +16,6 @@ export default function App() {
     setEmailVerdadero(emailRegex.test(email));
     setcontrasenaVerdadero(passwordRegex.test(contrasena));
   }
-  }
 
   return (
     // <SafeAreaView>
