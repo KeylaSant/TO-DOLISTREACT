@@ -15,6 +15,9 @@ function Login({navigation}){
   
       setEmailVerdadero(emailRegex.test(email));
       setContrasenaVerdadera(passwordRegex.test(contrasena));
+    if(emailVerdadero && contrasenaVerdadera){
+        navigation.navigate('todoList');
+    }
     }
 
     return ( 

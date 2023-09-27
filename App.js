@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import UpdatePassword from './Views/updatePassword';
 import SignUp from './Views/signUp';
+import TodoList from './Views/todoList';
 
 export default function App() {
 
@@ -19,7 +20,11 @@ export default function App() {
         <Stack.Screen
           name="login"
           component={Login}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: true,
+            headerTitleAlign: "center",
+            headerTitle: "Todo list"
+          }}
 
         />
 
@@ -40,7 +45,21 @@ export default function App() {
         <Stack.Screen
           name="signUp"
           component={SignUp}
-          options={{ headerShown:true }}
+          options={{ headerShown: true }}
+
+        />
+
+        <Stack.Screen
+          name="todoList"
+          component={TodoList}
+          options={{
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: '#2e393e'
+            },
+            headerTintColor:'white',
+            statusBarColor:'white'
+          }}
 
         />
 
@@ -49,4 +68,18 @@ export default function App() {
   );
 }
 
+
+export const globalStyles = StyleSheet.create({
+  campos:{
+    flex:1,
+    height: 50,
+    borderWidth:2,
+    borderColor:'#2e393e',
+    marginBottom:20,
+    borderRadius:10,
+    paddingHorizontal:20,
+    fontWeight:'800',
+    backgroundColor:'white'
+  },
+})
 
